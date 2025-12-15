@@ -1,0 +1,227 @@
+/* VARIABLES DE COLOR */
+:root {
+    --bg-dark: #121212;
+    --card-dark: #1e1e1e;
+    --accent-orange: #ff7d00;
+    --text-light: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-gray: #333;
+}
+
+/* GENERAL */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.main-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CABECERA HERO */
+.hero-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('media/imgs/cinema-bg.jpg'); /* Opcional: añade un fondo */
+    border-bottom: 3px solid var(--accent-orange);
+    margin-bottom: 30px;
+}
+
+.hero-header h1 {
+    font-size: 3rem;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.author {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* GALERÍA DE POSTERS */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.gallery-container img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+    border: 2px solid var(--accent-orange);
+}
+
+/* NAVEGACIÓN */
+.main-nav {
+    background: var(--card-dark);
+    border-radius: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.main-nav a:hover {
+    background: var(--accent-orange);
+    color: black;
+}
+
+/* CAJA DE CONTENIDO */
+.content-box {
+    background: var(--card-dark);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h2 {
+    color: var(--accent-orange);
+    border-left: 5px solid var(--accent-orange);
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+/* VIDEO Y AUDIO */
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid var(--border-gray);
+}
+
+audio {
+    width: 100%;
+    margin: 15px 0;
+    filter: invert(100%); /* Hace que el control de audio resalte en fondo oscuro */
+}
+
+/* TABLAS */
+.table-scroll {
+    overflow-x: auto;
+}
+
+.movie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #252525;
+}
+
+.movie-table thead {
+    background: var(--accent-orange);
+    color: black;
+}
+
+.movie-table th, .movie-table td {
+    padding: 12px;
+    border: 1px solid var(--border-gray);
+    text-align: center;
+}
+
+.movie-table tr:nth-child(even) {
+    background: #2a2a2a;
+}
+
+/* FORMULARIO */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: var(--accent-orange);
+}
+
+input, select {
+    background: #333;
+    border: 1px solid var(--border-gray);
+    padding: 12px;
+    color: white;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+}
+
+.submit-btn {
+    background: var(--accent-orange);
+    color: black;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background: #ff9533;
+}
+
+/* FOOTER */
+.bottom-nav {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.bottom-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.btn-register {
+    border: 1px solid var(--accent-orange);
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: var(--accent-orange) !important;
+}
